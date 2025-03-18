@@ -55,7 +55,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/api/*").permitAll()
-//                        .requestMatchers(request -> !request.getRequestURI().startsWith("/api")).permitAll()
+                        .requestMatchers(request -> !request.getRequestURI().startsWith("/api")).permitAll()
                         .anyRequest().authenticated() // Protect all other endpoints
                 )
                 .sessionManagement(sess -> sess
