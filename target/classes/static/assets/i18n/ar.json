@@ -1,0 +1,86 @@
+{
+    "error": {
+        "unauthorized": "Session is Expired. Please log in"
+    },
+    "patient_list": {
+        "add_patient":"إضافة مريض",
+        "code": "الرقم المتسلسل",
+        "first_name": "الاسم",
+        "father_name": "اسم الأب",
+        "last_name": "الشهرة",
+        "dob": "تاريخ الولادة",
+        "gaurdian_relationship_type": "صلة القرابة بولي الأمر"
+    },
+    "add_patient": {
+        "add_new_patient": "إضافة مريض جديد",
+        "update_patient": "تعديل المريض ",
+        "father": {
+            "father_information": "معلومات الأب"
+        },
+        "mother": {
+            "mother_information": "معلومات الأم"
+        },
+        "guardian": {
+            "guardian_information": "ولي الأمر",
+            "father": "الأب",
+            "mother": "الأم"
+        },
+        "patient": {
+            "title": "التلميذ",
+            "patient_code": "رقم التلميذ",
+            "class": "الصف الدراسي",
+            "room": "الفصل",
+            "health_info": {
+                "title": "البيانات الصحية",
+                "general_status": "الحالة الصحية العامة",
+                "growth_status": "نمو التلميذ في السنوات الست الأولى",
+                "earlier_faced_diseases": "الأمراض التي تعرض لها التلميذ في الست السنوات الأولى بعد الولادة",
+                "phsyical_accident": "الحوادث والإصابات البدنية"
+            },
+            "senses": {
+                "title": "الحواس",
+                "hearing": "السمع",
+                "sight": "البصر"
+            },
+            "educational":{
+                "title":"البيانات التربوية",
+                "lack_of_academic_achievement": {
+                    "title": "قصور في التحصيل الدراسي",
+                    "cycle": "المرحلة",
+                    "subject": "المادة"
+                },
+                "repeated_classes": {
+                    "title": "الصفوف المعادة",
+                    "class": "الصف الدراسي",
+                    "times": "عدد مرات الإعادة"
+                },
+                "old_schools": {
+                    "title": "المدارس السابقة",
+                    "school_name": "اسم المدرسة",
+                    "leave_reason": "سبب الترك"
+                },
+                "motivation_for_school":"توجه التلميذ نحو المدرسة"
+            }
+        },
+        "add_patient": "إضافة مريض"
+    },
+    "common": {
+        "first_name": "الاسم",
+        "father_name": "اسم الأب",
+        "last_name": "الشهرة",
+        "dob": "تاريخ الولادة",
+        "educational_level": "مستوى التعليم",
+        "pob": "مكان الولادة",
+        "job": "الوظيفة",
+        "phone_number": "رقم الهاتف",
+        "note": "ملاحظة",
+        "relationship_type": "صلة القرابة",
+        "gender": "الجنس",
+        "submit": "حفظ"
+    },
+    "login": {
+        "title":"تسجيل الدخول",
+        "username": "اسم المستخدم",
+        "password": "كلمة السر"
+    }
+}

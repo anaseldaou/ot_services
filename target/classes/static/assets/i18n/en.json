@@ -1,0 +1,73 @@
+{
+    "error": {
+        "unauthorized": "Session is Expired. Please log in"
+    },
+    "add_patient": {
+        "add_new_patient": "Add New Patient",
+        "update_patient": "Update Patient",
+        "father": {
+            "father_information": "Father Information"
+        },
+        "mother": {
+            "mother_information": "Mother Information"
+        },
+        "guardian": {
+            "guardian_information": "Guardian Information",
+            "relationship_type": "Relation",
+            "father": "is the Father",
+            "mother": "is the Mother"
+        },
+        "patient": {
+            "title": "Patient",
+            "patient_code": "Patient Number",
+            "class": "Class",
+            "room": "Room",
+            "health_info": {
+                "title": "البيانات الصحية",
+                "general_status": "General Healthy Status",
+                "growth_status": "Growth Status during the first 6 years",
+                "earlier_faced_diseases": "Faced diseases during the first 6 years",
+                "phsyical_accident": "Physical Accident"
+            },
+            "senses": {
+                "title": "Senes",
+                "hearing": "Hearing",
+                "sight": "Sight"
+            },
+            "lack_of_academic_achievement": {
+                "title": "Lack of Academic Achievment",
+                "cycle": "Cycle",
+                "subject": "Subject"
+            },
+            "repeated_classes": {
+                "title": "ٌRepeated Class",
+                "class": "Class",
+                "times": "Times"
+            },
+            "old_schools": {
+                "title": "Old Schools",
+                "school_name": "School Name",
+                "leave_reason": "Leave Reason"
+            },
+            "motivation_for_school":"Motivation for School"
+        },
+        "add_patient": "Add Patient"
+    },
+    "common": {
+        "first_name": "First Name",
+        "father_name": "Father Name",
+        "last_name": "Last Name",
+        "dob": "Date of Birth",
+        "educational_level": "Educational Level",
+        "job": "Job",
+        "phone_number": "Phone number",
+        "note": "Note",
+        "gender": "Gender",
+        "submit": "Save"
+    },
+    "login": {
+        "title": "Please Sign in",
+        "username": "Username",
+        "password": "Password"
+    }
+}
