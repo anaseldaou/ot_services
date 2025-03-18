@@ -1,0 +1,66 @@
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Report</title>
+    <style>
+        body {
+            font-family: Cairo;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        body {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .underline {
+            width: 100%;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="padding: 20px;">
+<div style="display: flex; justify-content: space-between; flex-direction: row; align-items: center;">
+    <div style="display: flex; flex-direction: column;">
+        <div>
+            ثانوية النهضة الحديثة
+        </div>
+        <div>وحدة التدخل و التشخيص المبكر و العلاج</div>
+        <div>برنامج تنمية القدرات والمهارات</div>
+    </div>
+    <div>
+        الموضوع : البيانات الشاملة
+    </div>
+</div>
+<div class="underline"></div>
+<div>
+    <span>المكرم ولي أمر التلميذ: </span>
+    <span th:text="${studentName}"></span>
+    <span th:text="${studentFatherName}"></span>
+    <span th:text="${studentLastName}"></span>
+</div>
+<br />
+<div>
+    السلام عليكم ورحمة الله وبركاته، تحية طيبة وبعد المحترم
+    حرصاً منا على تقديم أفضل الخدمات التربوية والتعليمية المناسبة لإبنكم / إبنتكم و بعد موافقتكم المسبقة ، نأمل
+    منكم الإجابة على بعض المعلومات المدونة أدناه والمعروفة لديكم بتعبئة الفراغات ووضع علامة ( ) عند الفقرة
+    المطلوبة مع تحري الدقة التامة.
+</div>
+. البيانات الأولية:
+<ul>
+    <li>إسم التلميذ: <span th:text="${studentName}"></span></li>
+    <li>رقم التلميذ: <span th:text="${studentCode}"></span></li>
+    <li>الصف الدراسي: <span th:text="${studentGrade}"></span></li>
+    <li>العمر : <span th:text="${studentDOB}"></span> سنوات</li>
+</ul>
+</body></html>

@@ -5,20 +5,28 @@ import com.nahda.ot_services.service.UserInfoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
-    @Autowired
+
     UserInfoService userService;
 
+    public AdminController(UserInfoService userService){
+        this.userService = userService;
+    }
+
     @PostMapping("/user")
-    public ResponseEntity<UserInfoDAO> getUserById(@Valid @RequestBody UserInfoDAO userInfoDAO) {
+    public ResponseEntity<UserInfoDAO> addUser(@Valid @RequestBody UserInfoDAO userInfoDAO) {
         return ResponseEntity.ok(userService.addUser(userInfoDAO));
+    }
+
+    @GetMapping("/user/{uuid}")
+    public ResponseEntity<UserInfoDAO> getUserByUUID(@PathVariable UUID uuid) {
+        return ResponseEntity.ok(userService.getUserByUUID(uuid));
     }
 
 }

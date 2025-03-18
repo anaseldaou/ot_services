@@ -1,0 +1,807 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="general_info" language="java" columnCount="1" columnDirection="RTL" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8fd1dd5-4ba7-46b5-b500-ffdf4be8939b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Font" default="true" hTextAlign="Right" markup="none" fontName="Amiri" pdfFontName="Amiri" pdfEncoding="Identity-H" pdfEmbedded="true"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#D9D9D9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#D9D9D9">
+		<pen lineWidth="1.0"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="earlyFacedDiseases" uuid="eab6e329-b540-4a4e-9644-57b3646dfe79">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="Parameter1" class="java.lang.String">
+			<defaultValueExpression><![CDATA["الحوادث والإصابات البدنية"]]></defaultValueExpression>
+		</parameter>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="name" class="java.lang.String"/>
+		<field name="note" class="java.lang.String"/>
+	</dataset>
+	<dataset name="lackOfAchievment" uuid="44946438-40a9-4524-a4f3-a36f27e89b4f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="lackOfAchievment" class="java.lang.String">
+			<defaultValueExpression><![CDATA["قصور في التحصيل العلمي لدى أفراد الأسرة"]]></defaultValueExpression>
+		</parameter>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="subject" class="java.lang.String"/>
+		<field name="cycle" class="java.lang.String"/>
+		<field name="relationship" class="java.lang.String"/>
+	</dataset>
+	<dataset name="oldSchools" uuid="e934e50d-5e95-4bfd-b9ef-0f81c6f39a4f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="oldSchool" class="java.lang.String">
+			<defaultValueExpression><![CDATA["المدارس السابقة"]]></defaultValueExpression>
+		</parameter>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="school" class="java.lang.String"/>
+		<field name="leaveReason" class="java.lang.String"/>
+	</dataset>
+	<dataset name="repeatedClasses" uuid="ef0424ef-3fb7-4fac-9459-6a173007917b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="repeatedClasse" class="java.lang.String">
+			<defaultValueExpression><![CDATA["الصفوف المعادة"]]></defaultValueExpression>
+		</parameter>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="classe" class="java.lang.String"/>
+		<field name="times" class="java.lang.Integer"/>
+	</dataset>
+	<parameter name="GuardianName" class="java.lang.String"/>
+	<parameter name="StudentCode" class="java.lang.String"/>
+	<parameter name="StudentClass" class="java.lang.String"/>
+	<parameter name="StudentDOB" forPrompting="false" class="java.util.Date"/>
+	<parameter name="StudentAge" class="java.lang.Integer"/>
+	<parameter name="StudentPOB" class="java.lang.String"/>
+	<parameter name="StudentFirstName" class="java.lang.String"/>
+	<parameter name="GuardianJob" class="java.lang.String"/>
+	<parameter name="GuardianNationality" class="java.lang.String"/>
+	<parameter name="GuardianRelation" class="java.lang.String"/>
+	<parameter name="GuardianJobAddress" class="java.lang.String"/>
+	<parameter name="GuardianPhone" class="java.lang.String"/>
+	<parameter name="StudentFullName" class="java.lang.String"/>
+	<parameter name="isDadDead" class="java.lang.String"/>
+	<parameter name="isMotherDead" class="java.lang.String"/>
+	<parameter name="ageOfStudentOnMotherDead" class="java.lang.Integer"/>
+	<parameter name="ageOfStudentOnFatherDead" class="java.lang.Long"/>
+	<parameter name="FatherJob" class="java.lang.String"/>
+	<parameter name="MotherJob" class="java.lang.String"/>
+	<parameter name="MotherEducationalLevel" class="java.lang.String"/>
+	<parameter name="FatherEducationalLevel" class="java.lang.String"/>
+	<parameter name="TodayDate" class="java.util.Date"/>
+	<parameter name="GeneralHealthStatus" class="java.lang.String"/>
+	<parameter name="GrowthStatus" class="java.lang.String"/>
+	<parameter name="GrowthStatusNote" class="java.lang.String"/>
+	<parameter name="earlyFacedDiseases" class="java.util.List"/>
+	<parameter name="hearing" class="java.lang.String"/>
+	<parameter name="sights" class="java.lang.String"/>
+	<parameter name="sightsNote" class="java.lang.String"/>
+	<parameter name="hearingNote" class="java.lang.String"/>
+	<parameter name="oldSchools" class="java.util.List"/>
+	<parameter name="repeatedClasses" class="java.util.List"/>
+	<parameter name="lackOfAchievment" class="java.util.List"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<pageHeader height="83" splitType="Stretch">
+		<element kind="staticText" uuid="00fc1f31-5a3f-4f7e-a96c-7102e99b4010" x="1" y="10" width="130" height="20" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[الموضوع : البيانات الشاملة]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="4793a3e6-d79c-40c6-a7c8-16b47a6a742c" x="455" y="10" width="100" height="20" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[ثانوية النهضة الحديثة]]></text>
+		</element>
+		<element kind="staticText" uuid="e79e2a78-20de-4cde-b62f-6c47f8619d3b" x="370" y="30" width="185" height="20" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[وحدة التدخل و التشخيص المبكر و العلاج]]></text>
+		</element>
+		<element kind="line" uuid="210bb606-6322-46e2-a69f-4c2cc4204009" positionType="FixRelativeToBottom" x="0" y="71" width="555" height="1"/>
+		<element kind="textField" uuid="594f2abd-44bb-4893-b3a8-9c78a67a2ecd" x="2" y="31" width="88" height="20" pattern="dd/MM/yyyy" blankWhenNull="true" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{TodayDate}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="39009591-7cef-47e4-9183-0086e7e93d97" x="90" y="31" width="40" height="20" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[التاريخ:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</pageHeader>
+	<columnHeader height="77" splitType="Stretch">
+		<element kind="rectangle" uuid="93e91752-55bd-4790-9fd3-0c0e151bb52f" x="0" y="0" width="555" height="20" backcolor="#E6E6E6"/>
+		<element kind="staticText" uuid="2fff7eb1-7741-4adf-9f1b-10aece1160ef" x="470" y="1" width="75" height="19" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[البيانات الأولية]]></text>
+		</element>
+		<element kind="rectangle" uuid="01d5f102-c77e-4c8e-9b73-b3c0a71b327b" x="0" y="20" width="555" height="48"/>
+		<element kind="staticText" uuid="e63e947a-6797-4264-8fc0-1872f3173f1e" x="480" y="20" width="75" height="24" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[رقم التلميذ:]]></text>
+		</element>
+		<element kind="staticText" uuid="ca442771-7be8-4f17-a977-80425ad85c89" x="318" y="20" width="62" height="24" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[إسم التلميذ:]]></text>
+		</element>
+		<element kind="staticText" uuid="2d7cc36b-80b3-46fe-aed8-2d39049ff81a" x="480" y="44" width="75" height="24" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[الصف الدراسي:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="628feb44-bf75-4f30-92b2-65d1e88821d3" x="101" y="20" width="58" height="24" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[تاريخ الميلاد:]]></text>
+		</element>
+		<element kind="staticText" uuid="d86a8205-0375-48f3-b4b8-fa767cb09290" x="91" y="44" width="82" height="24" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[العمر حتى اليوم:]]></text>
+		</element>
+		<element kind="textField" uuid="f3381648-ad96-466d-bdaf-42abfacb1fc4" x="380" y="20" width="100" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" underline="true" italic="false" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{StudentCode}]]></expression>
+			<property name="net.sf.jasperreports.style.box.bottomPadding" value="5"/>
+			<box>
+				<pen lineWidth="0.0" lineStyle="Solid"/>
+				<topPen lineWidth="0.0" lineStyle="Solid"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="5819b2c3-5c68-422f-ae14-0ad245a0470d" key="" x="165" y="20" width="152" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+			<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
+			<expression><![CDATA[$P{StudentFirstName}]]></expression>
+			<property name="net.sf.jasperreports.style.box.bottomPadding" value="5"/>
+			<box>
+				<pen lineWidth="0.0" lineStyle="Solid"/>
+				<topPen lineWidth="0.0" lineStyle="Solid"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="2995c665-1eb9-4fb4-834d-5297ca8186c0" x="355" y="44" width="125" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{StudentClass}]]></expression>
+			<box>
+				<pen lineWidth="0.0" lineStyle="Solid"/>
+				<topPen lineWidth="0.0" lineStyle="Solid"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="7f57ae36-054f-40ee-92f3-8fed52849d95" x="0" y="20" width="100" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{StudentDOB}]]></expression>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<box>
+				<pen lineWidth="0.0" lineStyle="Solid"/>
+				<topPen lineWidth="0.0" lineStyle="Solid"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="b3948f02-ccfc-4e1b-8a64-5b2c0a0c6688" x="0" y="44" width="90" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{StudentAge}]]></expression>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<box>
+				<pen lineWidth="0.0" lineStyle="Solid"/>
+				<topPen lineWidth="0.0" lineStyle="Solid"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="77" splitType="Stretch">
+			<element kind="staticText" uuid="3545fb4e-33cd-48e2-b039-62e313627900" x="0" y="24" width="555" height="42" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[ السلام عليكم ورحمة الله وبركاته، تحية طيبة وبعد,
+حرصاً منا على تقديم أفضل الخدمات التربوية والتعليمية المناسبة لإبنكم / إبنتكم و بعد موافقتكم المسبقة ، نأمل منكم الإجابة على بعض المعلومات المدونة أدناه والمعروفة لديكم بتعبئة الفراغات ووضع علامة ( ) عند الفقرة المطلوبة مع تحري الدقة التامة.
+]]></text>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="8d06d40a-2785-435a-9bca-d95357557658" x="455" y="0" width="100" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[المكرم ولي أمر التلميذ:]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="e399df07-ef1f-4f8a-9dd3-57492eb3985c" x="305" y="0" width="150" height="24" markup="styled" textAdjust="ScaleFont" underline="true" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{StudentFullName}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="504a533e-89e4-4b6d-a39b-13fc51c2485c" x="255" y="0" width="50" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[المحترم]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.layout"/>
+		</band>
+		<band height="68">
+			<element kind="rectangle" uuid="c060813d-1437-4e11-ae4a-2a564706f347" x="0" y="20" width="555" height="48"/>
+			<element kind="rectangle" uuid="5acaf37d-b8f7-4468-947d-3d355e8115ff" x="0" y="0" width="555" height="20" backcolor="#E6E6E6"/>
+			<element kind="staticText" uuid="9e2aa994-00ba-43e7-9f8e-68f9a2f2271a" x="445" y="0" width="105" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[معلومات عن ولي الأمر]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="d22478e6-6364-4d04-8d40-e5e99ed0e555" x="479" y="20" width="75" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[اسم ولي الأمر:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="561ab53e-9625-4010-99d8-7dd55befcde3" x="304" y="20" width="50" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[نوع العمل:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="c6067031-e016-4191-8076-c790bfde313a" x="120" y="20" width="60" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[صلة القرابة:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="70d77c55-524b-4439-942a-e2456230eb9d" x="143" y="44" width="60" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[عنوان العمل:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="12252b68-aa0c-4cbe-b52a-52e0ac6f161a" x="355" y="20" width="124" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GuardianName}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="7e6ad98c-cdec-4957-90e0-48e01c0ca589" x="180" y="20" width="125" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GuardianJob}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="50b556c2-fccc-4364-87b4-b29f2ff28a09" x="0" y="20" width="119" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GuardianRelation}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="b4a08b52-4d71-4a15-95c5-94f987ab8a69" x="0" y="44" width="144" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GuardianJobAddress}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="1e7b890a-2289-4365-ac58-d973a48ab2c7" x="510" y="44" width="45" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[الجنسية:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="4ecc5593-e166-49ab-b763-fb48ed6c247b" x="341" y="43" width="40" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[هاتف :]]></text>
+			</element>
+			<element kind="textField" uuid="f815abe4-c3b6-4d6b-b695-04a84042bdf2" x="380" y="43" width="131" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GuardianNationality}]]></expression>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="cfe284c5-eb61-4d03-8ddb-a29060d83bd8" x="202" y="44" width="140" height="24" markup="none" pdfFontName="" pdfEncoding="" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GuardianPhone}]]></expression>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="92">
+			<element kind="rectangle" uuid="2cb619fd-edfc-4c46-819c-16d640b5e7ac" x="0" y="19" width="555" height="72">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="8dacdadf-0e68-478b-9ea1-c7d1ef48432f" x="0" y="0" width="555" height="20" backcolor="#E6E6E6">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="3a630115-4a3e-4e18-b584-38f9f04694e5" x="434" y="19" width="121" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[هل الأب على قيد الحياة:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="e91c3b2d-660b-403f-815b-100000f26c86" x="450" y="44" width="105" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[مستوى تعليم الأب:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="2ed77683-838a-4a72-af3d-37564297082a" x="355" y="44" width="95" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{FatherEducationalLevel}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="f77558cd-f37d-4240-b3f7-29c923ae04b2" x="500" y="68" width="55" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[عمل الأب]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="47e86374-6cdd-4e51-adc2-4775f79a211f" x="140" y="67" width="60" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[عمل الأم:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="45d5bf5c-d461-4f6e-a5a9-f20410e9c57b" x="355" y="68" width="145" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{FatherJob}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="899ea4a7-f971-41eb-82d2-9b87234eddc6" x="0" y="67" width="140" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{MotherJob}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="57c203f0-757e-4ec8-bbfd-0b1b62a729cb" x="445" y="0" width="105" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[البيانات الاجتماعية:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="textField" uuid="46a0f166-7914-4d04-b11c-3b860bbbd08d" x="410" y="19" width="24" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" pattern="dd/MM/yyyy" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{isDadDead}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="6dc54abd-6fe0-42da-9335-370e921b58fb" x="310" y="20" width="100" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[عمر الطالب عند الوفاة]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="fca99c7b-f784-4078-8c60-b9be663760a9" x="286" y="20" width="24" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" pattern="dd/MM/yyyy" blankWhenNull="true" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{ageOfStudentOnFatherDead}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="45606f2f-fb00-4f3b-b163-79053c520563" x="149" y="20" width="106" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[هل الأم على قيد الحياة:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="1dc95f61-d10b-4214-904a-fe48ecb4b46f" x="125" y="20" width="24" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" pattern="dd/MM/yyyy" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{isMotherDead}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="6e2001db-5214-4c5c-bc0b-1ce35c0caef3" x="25" y="19" width="100" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[عمر الطالب عند الوفاة]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="05f40e02-66bf-4906-ba3b-0aa3db70c5eb" x="1" y="19" width="24" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" pattern="dd/MM/yyyy" blankWhenNull="true" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{ageOfStudentOnMotherDead}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="4fc945f3-f9c9-4878-8caf-6e51ae740366" x="0" y="44" width="95" height="24" markup="none" pdfFontName="Helvetica" pdfEncoding="Cp1252" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{MotherEducationalLevel}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="613e1abb-5863-4c98-b24b-5dfe597414b7" x="95" y="44" width="105" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[مستوى تعليم الأم:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="44">
+			<element kind="rectangle" uuid="33bb0d90-cfb6-45c6-be0f-a1c6185e44f0" x="0" y="0" width="555" height="20" backcolor="#E6E6E6">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="4cf4e7f9-9e7b-46cd-bcce-24af29e1b314" x="0" y="20" width="555" height="24">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="fbd82845-d6c2-4d1a-974c-92ea623d7fa1" x="475" y="0" width="75" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[البيانات الصحية:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="3d089ef3-eaac-4f3f-9646-b2baf1d4c44e" x="419" y="20" width="135" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[الحالة الصحية العامة للتلميذ/ة:]]></text>
+			</element>
+			<element kind="textField" uuid="6533944c-3798-4d38-b1b9-c3a4f4e6e408" x="305" y="20" width="114" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GeneralHealthStatus}]]></expression>
+			</element>
+			<element kind="staticText" uuid="6a369921-fd16-40f0-9f5f-555c7ccd71ff" x="129" y="20" width="175" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[نمو التلميذ في السنوات الست الأولى:]]></text>
+			</element>
+			<element kind="textField" uuid="43a15ae0-d82d-4e1a-bec5-8475f6232bba" x="0" y="20" width="128" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{GrowthStatus}]]></expression>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="68">
+			<element kind="component" uuid="941f9019-3538-4b66-81f6-d1fa67bd7d83" stretchType="NoStretch" x="0" y="0" width="555" height="68">
+				<component kind="table" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun uuid="65c5f9ac-6242-4817-bc56-54b0ab6979f8" subDataset="earlyFacedDiseases">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{earlyFacedDiseases})]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="group" uuid="fa6253b4-9b2c-495f-9a26-af7f52cdf4fd" width="555">
+						<tableHeader height="24" rowSpan="1" style="Table 1_TH">
+							<element kind="textField" uuid="9d1f320b-fdf1-4725-88ad-93fc29116f6d" x="0" y="0" width="555" height="24" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$P{Parameter1}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</tableHeader>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
+						<column kind="single" uuid="7b53ee64-b1c8-4908-889b-1c2806085514" width="280">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="f38dbe1c-da14-41f7-8399-8b6f52e82202" x="0" y="0" width="280" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[الملاحظة]]></text>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="5159e982-f60f-4e8d-ac85-84893e17563a" x="0" y="0" width="280" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{note}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						</column>
+						<column kind="single" uuid="06596dbb-d089-4c6e-958d-38a49e62c470" width="275">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="e3c0d709-0801-43d4-9bcb-913acb0458d4" x="0" y="0" width="275" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[الحادث أو الإصابة]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="c0ba355b-fc5f-4e37-b250-da3b1e7f7eed" x="0" y="0" width="275" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{name}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						</column>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+		</band>
+		<band height="68">
+			<element kind="rectangle" uuid="40e56da2-738b-4343-8129-2111023461a7" stretchType="ElementGroupHeight" x="0" y="0" width="555" height="20" backcolor="#E6E6E6"/>
+			<element kind="rectangle" uuid="a3667086-8e00-48b9-8efd-20a082d694c9" x="0" y="19" width="555" height="48">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="3434d067-6e70-4e55-acd3-54b049e4edeb" x="479" y="0" width="75" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[الحواس]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="66509944-13c6-448d-8c96-ddff837b55c2" x="520" y="20" width="35" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[السمع:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="ca1fb05e-2ab5-45bf-a2b8-78d2d9a34013" x="520" y="44" width="35" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[البصر:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="4b48aed5-aa5b-484d-8ea2-c8c7eae70951" x="404" y="20" width="30" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[وضح:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="staticText" uuid="a0b112df-e573-4633-b1b3-c37cfe98fa6b" x="404" y="44" width="30" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<text><![CDATA[وضح:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="11e0d206-d5f3-47ca-9b6b-7cad4a65ba1f" x="434" y="20" width="86" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{sights}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="69947fb5-f45e-4efb-a177-1efbb8a04615" x="434" y="44" width="86" height="23" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{hearing}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="91169964-ffc9-4ff8-872e-39ebf2dd9da1" x="0" y="20" width="404" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{sightsNote}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="fd43adcd-8dcb-4d4b-9f2a-0c7845371071" x="0" y="44" width="404" height="24" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$P{hearingNote}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="line" uuid="695b12a0-0187-4ee5-b86a-11d7c8c892e4" x="0" y="44" width="555" height="1">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="68">
+			<element kind="component" uuid="c99da498-dbea-48e8-a222-06c63900fb7e" stretchType="ElementGroupHeight" x="0" y="0" width="555" height="68">
+				<component kind="table" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun uuid="04afc788-3cbf-4f51-b1e2-ee11e3a0c3dd" subDataset="lackOfAchievment">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{lackOfAchievment})]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="group" uuid="5469d55e-56bd-4d37-8585-79780d542ed1" width="555">
+						<tableHeader height="24" rowSpan="1" style="Table 1_TH">
+							<element kind="textField" uuid="2e14114f-e5c8-459c-993a-aa8f63919c2e" x="0" y="0" width="555" height="24" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$P{lackOfAchievment}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</tableHeader>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
+						<column kind="single" uuid="88e95163-07d5-4c84-96f8-64938910605e" width="400">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="c7e6f131-8784-43a5-9acd-475e898d1963" x="0" y="0" width="400" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[المادة]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="11ea15cd-0fa2-4694-b6ea-b72c2f906abc" x="0" y="0" width="400" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{subject}]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						</column>
+						<column kind="single" uuid="e19f5d9f-836c-4655-aa5a-4ad1109970b5" width="110">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="e0c663b1-f1ac-421d-80a9-62fd58b9f952" x="0" y="0" width="110" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[المرحلة]]></text>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="fb5fd3a3-3dac-48e3-b8fd-7d883ff0caa5" x="0" y="0" width="110" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{cycle}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						</column>
+						<column kind="single" uuid="d7a6b7b4-0718-4c25-9351-1a10735f5e35" width="45">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="43a6d133-9b64-4b43-ae16-de710e42dff5" x="0" y="0" width="45" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[العلاقة]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="d17d4a77-305a-48df-8503-17920c4410a5" x="0" y="0" width="45" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{relationship}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						</column>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+			</element>
+		</band>
+		<band height="68">
+			<element kind="component" uuid="9773e4fb-b668-4435-94eb-0838b140480a" stretchType="NoStretch" x="0" y="0" width="555" height="68">
+				<component kind="table" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun uuid="083e5695-a87a-4c6a-86de-db5ef69df96e" subDataset="repeatedClasses">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{repeatedClasses})]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="group" uuid="c9b6713c-dd66-41aa-947e-6ccc3b680505" width="555">
+						<tableHeader height="24" rowSpan="1" style="Table 1_TH">
+							<element kind="textField" uuid="2dab6ecd-d773-4f3a-ab5b-99ef9bd1fde3" x="0" y="0" width="555" height="24" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$P{repeatedClasse}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</tableHeader>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
+						<column kind="single" uuid="606aa659-9e30-48d3-bac2-aa466b1dc386" width="277">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="af83f5f5-1e2d-4bba-8f76-e7606f3577d0" x="0" y="0" width="277" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[عدد المرات]]></text>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="1677a713-aac6-4645-b69a-e5b1502c935c" x="0" y="0" width="277" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{times}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						</column>
+						<column kind="single" uuid="8f7f6256-37f8-49c8-85f7-04b4a825d323" width="278">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="6490b777-10b5-4188-9f21-47748df2f1df" x="0" y="0" width="278" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[الصف]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="b3466a10-1ea6-4f06-be32-caa50af53de3" x="0" y="0" width="278" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{classe}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						</column>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="68">
+			<element kind="component" uuid="55624d92-7541-4dd0-812a-a44ddde1192c" stretchType="NoStretch" x="0" y="0" width="555" height="68">
+				<component kind="table" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun uuid="61ba5361-c3b4-47fb-8b58-07415fb860e1" subDataset="oldSchools">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{oldSchools})]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="group" uuid="e6034bda-5e21-4ef2-beed-23ed0f6a4fea" width="555">
+						<tableHeader height="24" rowSpan="1" style="Table 1_TH">
+							<element kind="textField" uuid="abd87c7b-0c72-46dc-a385-cd83cac7a4d0" x="0" y="0" width="555" height="24" hTextAlign="Right" vTextAlign="Middle">
+								<expression><![CDATA[$P{oldSchool}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</tableHeader>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
+						<column kind="single" uuid="b033bd10-228b-427b-9f5b-a720bcd4f0e2" width="277">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="a33e6bf2-653f-436b-a3ce-e91267131589" x="0" y="0" width="277" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[سبب الترك]]></text>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="76d901a2-c8ef-4412-ba06-8a317503634f" x="0" y="0" width="277" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{leaveReason}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						</column>
+						<column kind="single" uuid="910d8a8d-6a2a-49cb-a9d1-a74426335ccb" width="278">
+							<columnHeader height="24" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="5c78b553-fd64-40af-9acc-01036a63e9bc" x="0" y="0" width="278" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<text><![CDATA[اسم المدرسة]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="24" style="Table 1_TD">
+								<element kind="textField" uuid="21f11bbc-5526-488d-9510-91621a3e8a0d" x="0" y="0" width="278" height="24" hTextAlign="Right" vTextAlign="Middle">
+									<expression><![CDATA[$F{school}]]></expression>
+								</element>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						</column>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
