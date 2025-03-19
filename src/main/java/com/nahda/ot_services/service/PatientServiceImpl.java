@@ -172,7 +172,7 @@ public class PatientServiceImpl implements IPatientService {
                 .stream().map(lack -> new LackOfAcademicAchievementReportDTO(lack.getRelationshipType().getName(),lack.getAcademicCycle().getName(), lack.getSubject().stream().map(sub -> sub.getName()).collect(Collectors.joining(" , ")))).toList());
         parameters.put("oldSchools", occupationalTherapistResponseDTO.getPatient().getOldSchools().stream().map( school -> new OldSchoolReportDTO(school.getSchool().getName(),school.getLeaveReason())).toList());
         parameters.put("repeatedClasses", occupationalTherapistResponseDTO.getPatient().getRepeatedClasses().stream().map( repeatedClasses -> new RepeatedClassReportDTO(repeatedClasses.getClasse().getName(),repeatedClasses.getTimes())).toList());
-        String templatePath = "src/main/resources/reports/general_info.jrxml"; // Adjust path as needed
+        String templatePath = "reports/general_info.jrxml"; // Adjust path as needed
         JasperPrint jasperPrint = jasperReportService.generateReport(templatePath, parameters);
         jasperPrint.getStyles();
         byte[] pdfBytes = jasperReportService.exportReportToPdf(jasperPrint);
